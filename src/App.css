@@ -13,10 +13,11 @@ body {
 	margin: 10px;
 }
 
-
 #listItem {
 		font-size: 30px;
+		text-transform: uppercase;
 }
+
 
 li.itemCard {
 	padding: 15px;
@@ -24,6 +25,7 @@ li.itemCard {
 	background-color: grey;
 	border-radius: 10px;
 	list-style: none;
+	margin-bottom: 10px;
 }
 
 #checkbox {
