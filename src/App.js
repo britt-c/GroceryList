@@ -4,12 +4,13 @@ import React, { useState } from 'react';
 		const [textareaValue, setTextareaValue] = useState("")
 		const [items, setItems] = useState([])
 		const listItems = items.map((item, i)=> <li key={i}>{item}</li>)
+		
 		const storeText = (event)=> {
 			setTextareaValue(event.currentTarget.value)
 		}
 
 		const handleButtonClick = (event)=> {
-			//add textareavalue to array
+			setItems([...items, textareaValue])
 		}
 		return (
 			<div className="App">
