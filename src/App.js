@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+	
+	const App = ()=> {
+		const [textareaValue, setTextareaValue] = useState("")
+		const [items, setItems] = useState([])
+		const listItems = items.map((item, i)=> <li key={i}>{item}</li>)
+		const storeText = (event)=> {
+			setTextareaValue(event.currentTarget.value)
+		}
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+		const handleButtonClick = (event)=> {
+			//add textareavalue to array
+		}
+		return (
+			<div className="App">
+				<header className="list-title">Grocery List</header>
+				<textarea onChange={storeText}placeholder="What to get..."></textarea>
+				<br/>
+				<button onClick={handleButtonClick}>Add</button>
+				<ul>{listItems}</ul>
+			</div>
+		);
+	}
 
 export default App;
