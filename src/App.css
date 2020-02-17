@@ -4,4 +4,18 @@ body {
 	background-color: #c1d46e;
 }
 
+#itemEntryBar {
+	padding: 10px 75px;
+}
 
+#addBtn {
+	padding: 10px;	
+	margin: 10px;
+}
+
+.item {
+}
+
+#listItem {
+		font-size: 25px;
+}

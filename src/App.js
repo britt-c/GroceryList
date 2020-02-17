@@ -6,12 +6,12 @@ import './App.css';
 		const [items, setItems] = useState([])
 		const listItems = items.map((item, i)=> (
 			<li key={i}>
-				<span>
-					<span className="list-item">{item}</span> 
+				<span className="item">
+					<span id="listItem">{item}</span> 
 					<input type="checkbox" />
 					<br />
-					<label htmlFor="quantity">Quantity</label><br />
-					<input placeholder="0" type="number" min="1" max="99" />
+					<label htmlFor="item-quantity">Quantity</label><br />
+					<input id="quanBtn" placeholder="0" type="number" min="1" max="99" />
 				</span>
 			</li>
 		))
@@ -27,11 +27,10 @@ import './App.css';
 
 		return (
 			<div className="App">
-				<header className="list-title">Grocery List</header>
+				<header id="listTitle">Grocery List</header>
 				<br />
-				<input onChange={storeText} placeholder="What to get..." />
-				<br/>
-				<button onClick={handleButtonClick}>Add</button>
+				<input id="itemEntryBar" onChange={storeText} placeholder="What to get..." />
+				<button id="addBtn" onClick={handleButtonClick}>Add</button>
 				<ul>{listItems}</ul>
 
 			</div>
