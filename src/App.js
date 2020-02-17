@@ -5,13 +5,12 @@ import './App.css';
 		const [textareaValue, setTextareaValue] = useState("")
 		const [items, setItems] = useState([])
 		const listItems = items.map((item, i)=> (
-			<li key={i}>
-				<span className="item">
-					<span id="listItem">{item}</span> 
-					<input type="checkbox" />
+			<li className="itemCard" key={i}>
+				<span id="item">
+					<span id="listItem">{item}</span><label htmlFor="item-quantity">  Quantity: </label>
+					<input id="quanBtn" placeholder="0" type="number" min="1" max="99" /> 
+					<input id="checkbox" type="checkbox" />
 					<br />
-					<label htmlFor="item-quantity">Quantity</label><br />
-					<input id="quanBtn" placeholder="0" type="number" min="1" max="99" />
 				</span>
 			</li>
 		))

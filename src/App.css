@@ -13,9 +13,24 @@ body {
 	margin: 10px;
 }
 
-.item {
-}
 
 #listItem {
-		font-size: 25px;
+		font-size: 30px;
+}
+
+li.itemCard {
+	padding: 15px;
+	color: white;
+	background-color: grey;
+	border-radius: 10px;
+	list-style: none;
+}
+
+#checkbox {
+	transform: scale(3);
+	margin-left: 150px;
+}
+
+ul {
+	padding: 0;
 }
